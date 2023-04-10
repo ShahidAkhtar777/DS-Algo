@@ -1,0 +1,1 @@
+A to the power B gives: 1024
