@@ -31,6 +31,9 @@
 //     1 <= k <= weights.length <= 105
 //     1 <= weights[i] <= 109
 
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     long long putMarbles(vector<int>& weights, int k) {

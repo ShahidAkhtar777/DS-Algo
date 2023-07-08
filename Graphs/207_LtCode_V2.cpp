@@ -12,6 +12,9 @@
 // If its cyclic then can't complete all course.
 // Below is DFS implementation 
 
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution {
 public:
     bool dfs_helper(int src, vector<int> &visited, vector<int> &path, vector<int> map[]){
