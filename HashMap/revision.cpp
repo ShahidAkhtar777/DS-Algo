@@ -55,9 +55,10 @@ int computeKSumLength(vector<int> nums, int k)
     return maxLen;
 }
 
+// Time - O(NlogN)
 int longestConsecutiveSubSequence(vector<int> nums)
 {
-    map<int, bool> m;
+    map<int, bool> m; // Its sorting them internally so not much optimised solution
     for (auto n : nums)
         m[n] = true;
     int maxLen = 0;
@@ -79,6 +80,28 @@ int longestConsecutiveSubSequence(vector<int> nums)
         }
     }
     return maxLen;
+}
+
+// Time - O(n) Optimised code
+int longestConsecutiveSubSequenceOptimised(vector<int> &nums) {
+    unordered_map<int, bool> numsMap;
+
+        for(int i=0;i<nums.size();i++)
+            numsMap[nums[i]] = true;
+
+        int longestSeqLength = 0;
+        for(auto e: numsMap) {
+            if(!numsMap.count(e.first-1)) {
+                int val = e.first;
+                int length = 0;
+                while(numsMap.count(val)) {
+                    length++;
+                    val++;
+                }
+                longestSeqLength = max(length, longestSeqLength);
+            }
+        }
+        return longestSeqLength;
 }
 
 // bool IsStrContainPtr(int strHash[26], int ptrHash[26]) {
@@ -236,6 +259,7 @@ int main()
     // [10,4,20,1,3,3,2,19]
     // RES :: 4 1 2 3 :: Length 4
     cout << "Longest Consecutive Subsequence: " << longestConsecutiveSubSequence(nums) << endl;
+    cout << "Optimised Longest SubSeq: " << longestConsecutiveSubSequenceOptimised(nums) << endl;
 
     // Q5 -> Minimum Length Window Substring
     // All chars of pattern should be present in string
