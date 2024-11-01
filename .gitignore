@@ -1,0 +1,25 @@
+# Virtual environment
+venv/
+
+# configs
+.idea/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Pytest cache
+.cache/
+
+# Other common files to ignore
+*.egg-info/
+dist/
+build/
+*.log
+
+get-pip.py
+
