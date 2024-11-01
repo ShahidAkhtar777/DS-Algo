@@ -20,7 +20,7 @@ jobs:
         pip install flake8 black
 
     - name: Run Flake8
-      run: flake8 ./ --exclude tests,migrations
+      run: flake8 ./ --config .flake8 --exclude venv,tests,migrations
 
     - name: Run Black
-      run: black ./
+      run: black . --config pyproject.toml

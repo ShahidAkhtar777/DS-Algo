@@ -1,3 +1,4 @@
 # pyproject.toml
 [tool.black]
-line-length = 79  # Set maximum line length
+line-length = 88
+skip-string-normalization = true
