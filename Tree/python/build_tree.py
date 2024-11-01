@@ -1,5 +1,6 @@
 from node import Node
 
+
 def build_tree(preorder_values):
     """Build a binary tree from a list of values in preorder."""
     if not preorder_values:
