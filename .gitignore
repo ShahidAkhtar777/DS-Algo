@@ -22,4 +22,5 @@ build/
 *.log
 
 get-pip.py
+http_ca.crt
 
